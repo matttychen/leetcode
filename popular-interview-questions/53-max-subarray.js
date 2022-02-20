@@ -9,15 +9,10 @@
   let currentSum = 0;
   
   nums.forEach((num) => {
-      currentSum += num;
-      
-      if (currentSum > currentMax) {
-          currentMax = currentSum;
-      }
-      
-      if (currentSum < 0) {
-          currentSum = 0;
-      }
+    currentSum += num;
+    
+    if (currentSum > currentMax) currentMax = currentSum;      
+    if (currentSum < 0) currentSum = 0;
   })
   
   return currentMax;
