@@ -1,0 +1,25 @@
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var longestArithSeqLength = function(nums) {
+    const dp = [new Map()];
+    let longestLength = 2;
+    
+    for (let i = 1; i < nums.length; i++) {
+        dp.push(new Map());
+        for (let j = 0; j < i; j++) {
+            const diff = nums[i] - nums[j];
+                    
+            if (dp[j].get(diff)) {
+                dp[i].set(diff, dp[j].get(diff) + 1)
+            } else {
+                dp[i].set(diff, 2)
+            }
+            
+            longestLength = Math.max(longestLength, dp[i].get(diff));
+        }
+    }
+    
+    return longestLength;
+};
