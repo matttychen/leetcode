@@ -19,6 +19,10 @@ array[2] = 'test';
 
 console.log(array[0]); 
 
+const testarray = ['a'];
+const second = ['b', 'c'];
+
+console.log(testarray.concat(second));
 
 
 /**
