@@ -14,8 +14,10 @@ console.log(obj.prop.getFullname());
 var test = obj.prop.getFullname.bind(obj.prop); 
  
 
+const array = [];
+array[2] = 'test';
 
-console.log(test()); 
+console.log(array[0]); 
 
 
 
